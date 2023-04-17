@@ -15,7 +15,6 @@
 
 </head>
 <body>
-    <h1>React Basic</h1>
 
     <div id="main"></div>
 
@@ -24,12 +23,24 @@
 </body>
 <script type="text/babel">
     console.log('react')
+
     const Main = () =>{
+
+        let name = "Thiha Aung";
+        let age = 30;
+        let className = "my-class-name"
+
+        let showAlert = () =>{
+            alert('Hello.....')
+        }
+
         return (
             // this is 3 points of JSX 
-            <div className="class-name">
-                <h1>Component header</h1>
-                <p>Component Description</p>
+            // don't invoke function like that showAlert() , should wite function showAlert or ()=> alert('Hello ....')
+            <div className={className}>
+                <h1>{name.toUpperCase()}</h1>   
+                <h3>{age}</h3>    
+                <button onClick={showAlert}>Click Here to Show Alert.</button>             
             </div>
         )
     }
