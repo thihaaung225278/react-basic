@@ -25,11 +25,18 @@
 <script type="text/babel">
     console.log('react')
     const Main = () =>{
-        return <div>Main Component</div>
+        return (
+            // this is 3 points of JSX 
+            <div className="class-name">
+                <h1>Component header</h1>
+                <p>Component Description</p>
+            </div>
+        )
     }
     let rootContainer   = document.querySelector('#main');
     let e               = React.createElement;
     let root   = ReactDOM.createRoot(rootContainer);
     root.render(e(Main))
+
 </script>
 </html>
